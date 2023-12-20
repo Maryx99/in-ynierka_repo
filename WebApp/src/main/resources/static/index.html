@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Application</title>
+</head>
+<body>
+<div id="content"></div>
+
+<script>
+    const contentDiv = document.getElementById('content');
+
+
+    // Funkcja do pobierania danych z backendu
+    async function fetchData() {
+        try {
+            const response = await fetch('http://localhost:8080/api/users/3/firstname');
+            const data = await response.json();
+            contentDiv.innerHtml = data.firstname;
+        } catch (error) {
+            console.error('Błąd podczas pobierania danych z backendu:', error);
+        }
+    }
+
+    // Wywołanie funkcji do pobierania danych po załadowaniu strony
+    window.onload = fetchData;
+</script>
+</body>
+</html>
