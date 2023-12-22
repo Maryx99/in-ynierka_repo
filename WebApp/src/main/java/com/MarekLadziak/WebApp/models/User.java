@@ -7,26 +7,22 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column
-    private String firstName;
-    @Column
-    private String lastName;
-    @Column
-    private String email;
-    @Column
-    private String password;
-    @Column
-    private int age;
-    @Column
-    private String occupation;
-    @Column
-    private String role;
+//    @Column - ta adnotacja nie jest ci potrzebna jezeli nic w niej nie zmieniasz
 
-    public String getRole() {
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
+    private int age;
+    private String occupation;
+    @Enumerated(EnumType.STRING)
+    private Role role; // to powinno byc enumem zeby ograniczyc mozliwe role
+
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 

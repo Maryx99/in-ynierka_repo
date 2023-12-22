@@ -1,0 +1,11 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(œŞë½8Õ‰ÖˆÉ1
+P
+java:S1068".Remove this unused "httpStatus" private field.(Ê«¿øúÿÿÿÿ8Ù‰ÖˆÉ1
+P
+java:S1068	".Remove this unused "statusCode" private field.(õéÛüùÿÿÿÿ8Ù‰ÖˆÉ1
+J
+java:S1068
+"-Remove this unused "timeStamp" private field.(ëâû£8Ù‰ÖˆÉ1
+H
+java:S1068"+Remove this unused "message" private field.(Úæê»8Ú‰ÖˆÉ1
